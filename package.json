@@ -1,0 +1,20 @@
+{
+  "name": "licensekey",
+  "version": "1.0.0",
+  "main": "dist/server/index.js",
+  "type": "module",
+  "scripts": {
+    "build:client": "vite build --config client/vite.config.ts",
+    "build:server": "esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist/server",
+    "build": "npm run build:client && npm run build:server",
+    "start": "node dist/server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "vite": "^5.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.0",
+    "typescript": "^5.3.3"
+  }
+}
