@@ -1,15 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
+    "target": "ES2017",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": "./",
     "strict": true,
-    "baseUrl": ".",
-    "paths": {
-      "@shared/*": ["shared/*"]
-    },
-    "allowSyntheticDefaultImports": true
+    "esModuleInterop": true
   },
-  "include": ["server", "client", "shared"]
+  "exclude": ["node_modules", "dist"]
 }
